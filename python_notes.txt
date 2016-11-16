@@ -10,7 +10,8 @@ Data types include integers, booleans (True, False)
 
 Whitespace is important. You must indent certain things for them to work.
 
-One line comments use #. You can write several line comments within triple double quotes """  """
+One line comments use #. You can write several line comments within triple
+quotes """  """
 
 Math Operations are same as most languages
 
@@ -53,7 +54,8 @@ Conditional statements
 	elif == else if
 
 
-**Protip** - if you want to print and return, put print before return. Return ends the command.
+**Protip** - if you want to print and return, put print before return. Return
+ends the command.
 
 Understand brackets vs. parentheses in Python
 
@@ -100,5 +102,29 @@ python commands and input:
 
 		%
 				modulo. finds the remainder of a number. if % == 0, number is even
+				can also function as a string formatter, usually followed by a letter
+
+		%s
+				string formatter. Used as a placeholder within a string.
+
+		%d
+				number formatter. Used a placeholder within a string.
+
+		%r
+		 		raw formatter. Returns value exactly as written in python. Used as a
+				placeholder in a string.
+
+		round(number [, ndigits])
+				rounds a floating point number to the decimals indicated. default is 0.
+
+		\
+				escape character. used to print exceptional characters in Python
+				ex. print("He said \"Hello\"") will print the quotes around Hello
+
+		\n
+				print new line. Python recognizes this within strings
+
+		input("optional text")
+				prompts user for some sort of input. prints the string inside, if one.
 
 		
