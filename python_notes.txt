@@ -1,0 +1,104 @@
+Notes from Python class
+
+Very simple syntax
+
+"print [variable]" is all you need to print
+
+[variable name] = to set variables
+
+Data types include integers, booleans (True, False)
+
+Whitespace is important. You must indent certain things for them to work.
+
+One line comments use #. You can write several line comments within triple double quotes """  """
+
+Math Operations are same as most languages
+
+	addition = +
+	subtraction = -
+	multiplication = *
+	division = /
+	Exponents = **
+	modulo (remainder) = %
+
+
+Three ways to create strings
+	'string'
+	"string"
+	str(string)
+
+String methods
+	len("string") = length of characters in string
+	"String".upper() = converts string to upper case
+	"String".lower() = converts string to lower case
+
+
+
+Comparators:
+	< less than
+	> greater than
+	<= less than or equal to
+	>= greater than or equal to
+	== equal to
+	!= not equal to
+
+
+Boolean operators (REVIEW THIS SECTION)
+	True == the statement is true
+	False == the statement is false
+
+Conditional statements
+	if
+	else
+	elif == else if
+
+
+**Protip** - if you want to print and return, put print before return. Return ends the command.
+
+Understand brackets vs. parentheses in Python
+
+--review classes and methods in Python
+from Up and Running with Python - Review Ch. 3 Working with Calendars
+
+-----------------------------------------------------------------------
+LPTHW - 11/15/2016 - ex. 22
+
+command line stuff:
+    cd "Folder\Folder"
+		    Change directory. this is how you get around
+
+		cd..
+				back out one folder
+
+		C:, or D:, etc.
+		    Change your drive
+
+		dir
+				show all folders and files in the current directory
+
+		python
+				initiate python in your shell. this also prefaces calls to run script
+
+		python -m pydoc <name>
+				look something up in pydoc from the command line
+
+		quit()
+				exit python or whatever program you are in
+
+		mkdir
+				creates a folder in the current directory
+
+-------------------------------------------------
+
+python commands and input:
+
+		print()
+				outputs info to the screen
+
+		#
+				comments out the following line of text
+
+		%
+				modulo. finds the remainder of a number. if % == 0, number is even
+
+		
