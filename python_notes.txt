@@ -127,4 +127,61 @@ python commands and input:
 		input("optional text")
 				prompts user for some sort of input. prints the string inside, if one.
 
+		print("print something", print_variable, end='')
+				how to print text, a variable, and keep from returning a new line
+
+		pydoc [function], or python -m pydoc [function]
+				brings up python documentation
+
+		argv
+				arguments put in the command line when prompting a script.
+				ex. script, file1, file2 = argv
+
+		from module import module
+				used at the beginning of a script to add additional features
+
+		open(filename, ['w'])
+				opens a file for reading 'r', writing 'w', etc. access in your script
+				common values:
+						'r' reading (default)
+						'w' writing, truncating file
+						'x' exclusive creation
+						'a' writing, appending
+						'b' binary mode
+						't' text mode (default)
+						'+' updating (reading and writing)
+
+		filename.read()
+				gets the content from a file. usually wrapped in print function
+
+		filename.truncate()
+				deletes previous values in file
+
+		filename.close()
+				closes the opened file, a good habit for when you finish with files
+
+		filename.write([thing_to_write])
+				write to a file. can be a string or variable
+
+		:
+				kicks off functions and groups of code (if statements, for ex)
+
+		def function(<args>):
+				format for making a function. args is optional
+
+		*args
+				packages args for functions. they need to be unpacked (defined) within function.
+
+		filename.seek(0)
+				finds specific byte in file. 0 resets to beginning.
+
+		filename.readline()
+				reads line of file from current point, incrementing by one with each call
+
+		+=
+				increment symbol. ex. count += 1 is same as count = count +1
+
+		return
+				assigns value of function. also ends function
+
 		
