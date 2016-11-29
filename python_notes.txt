@@ -184,4 +184,30 @@ python commands and input:
 		return
 				assigns value of function. also ends function
 
-		
+		exit()
+				command from sys module. ends a script and returns 0 for no error or 1++ for different errors
+
+		.
+				used to denote functions for certain modules
+
+		.join(' ')
+				joins a list together using the value in parenthesis
+
+		.pop()
+				removes a value from a list
+
+		.append()
+				adds a value to a list
+
+		module
+				Python file with functions and / or variables.
+				modules are imported to other files (at the head) and are called in the new file via the . operator
+
+		dictionary[key]
+				syntax for looking things up in a dictionary
+
+		module.key
+				syntax for referencing a variable in another module
+
+		module.key()
+				syntax for referencing a function in another module
