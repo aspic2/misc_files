@@ -1,0 +1,30 @@
+'''
+Foundations of Programming: Object-Oriented Design
+'''
+Intro.6
+"To write any piece of software, we need to do three things:
+    1. Understand our problem - Analysis
+    2. Plan our solution - Design
+    3. Build it - Programming
+    "
+
+
+1.2
+    Objects in programming are similar to objects in real-life. They have:
+        1. Identity (are separate from things like them)
+        2. Attributes (characteristics about them, like names or colors)
+        3. Behavior (they do something or receive some action)
+
+1.3
+    Classes have names, attributes, and methods (functions).
+
+1.4 through 1.7
+    APIE =
+        Abstraction: Focus on the essential qualities of an example, leaving out extras
+        Polymorphism: an object's ability to behave differently in different
+            instances / situations.
+        Inheritance: A subclass inherits all the attributes and behaviors of the
+            superclass.
+        Encapsulation = bundling attributes of a class together and hiding them
+            from other parts of the application. This is less for secrecy and
+            more for avoiding cascading problems when changing things.
