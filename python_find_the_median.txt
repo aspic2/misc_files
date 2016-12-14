@@ -1,0 +1,14 @@
+def median(list_o_numbers):
+    sorted_list_o_numbers = sorted(list_o_numbers)
+    number_of_values = (len(sorted_list_o_numbers))
+    #high_middle_number and low_middle_number not used
+    high_middle_number = sorted_list_o_numbers[number_of_values / 2]
+    low_middle_number = sorted_list_o_numbers[(number_of_values / 2) - 1]
+    if number_of_values % 2 == 0:
+        return ((sorted_list_o_numbers[number_of_values / 2]) + (sorted_list_o_numbers[(number_of_values / 2) - 1])) / 2.0
+    else:
+        return sorted_list_o_numbers[len(sorted_list_o_numbers) / 2]
+       
+big_listin = [1,2,3,4,5]        
+
+print median(big_listin)

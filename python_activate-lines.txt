@@ -1,0 +1,9 @@
+def activate_lines(IO):
+    line = get_line_ID(IO)
+    creative = get_creative(line)
+    line_status = get_line_status(line)
+    for line in IO:
+        if line is 'inactive':
+            if creative > 0 and creative == 'active':
+                line_status = 'active'
+            return line, " ", line_status

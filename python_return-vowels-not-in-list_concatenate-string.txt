@@ -1,0 +1,11 @@
+def anti_vowel(text):
+    str(text)
+    vowels = ('a','e','i','o','u','A','E','I','O','U')
+    vowelless_word = ''
+    for character in str(text):
+        if character not in vowels:
+            vowelless_word += character
+    return vowelless_word
+   
+print anti_vowel('barrel')
+
