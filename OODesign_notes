@@ -28,3 +28,42 @@ Intro.6
         Encapsulation = bundling attributes of a class together and hiding them
             from other parts of the application. This is less for secrecy and
             more for avoiding cascading problems when changing things.
+
+2.1
+    Steps in the OO Analysis and Design Process:
+        1. Gather requirements
+            a) What does the app need to do?
+        2. Describe the app
+            a) Simple narrative of how people use the app to complete its goal.
+        3. Identify the main objects
+            a) Go back through the narrative, find the most important objects
+                actions, and results, and discard superfluous things
+        4. Describe the Interactions
+            a) Figure out how your objects interact with each other
+        5. Create a Class Diagram
+
+2.2
+    Requirements - What must the program do?
+    NOTE: Cut the fluff here. No half-formed ideas on what might be cool.
+          Only things that it MUST have/do.
+        Functional Requirements
+            Features and Capabilities
+        Non-Functional Requirements
+            Help
+            Legal
+            Performance
+            Support
+            Security
+
+        FURPS / FURPS+
+            Functional requirements
+            Usability requirements
+            Reliability requirements
+            Performance requirements
+            Supportability requirements
+
+            +
+            Design requirements
+            Implementation requirements
+            Interface requirements
+            Physical requirements
