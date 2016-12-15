@@ -67,3 +67,32 @@ Intro.6
             Implementation requirements
             Interface requirements
             Physical requirements
+
+3.1
+    Use Cases - used to explain how and why a user will use the application
+        Should be simple and in plain English
+    Use cases have three parts:
+        1) Title - short phrase, active verb
+        2) Actor - person accomplishing goal
+        3) Scenario - step-by-step on how the actor accomplishes goal
+            Paragraph of short, declarative sentences
+            Numbered list of steps
+        3.5) Extensions - covers situations not seen in normal scenario
+                Issues, Exceptions, etc.
+
+3.2
+    Actors are people (or systems) that live outside the application that
+    need to accomplish goals within the application.
+    -Determine if you need different roles or security clearance between different Actors
+    -The same person could be different actors on different days, as the
+        actor designation revolves around what they want to accomplish
+
+3.3
+    Identifying the scenarios
+        Create user-focused goals (not "login to account", but rather
+        what the user wants to do when they login.)
+            -emphasize the goal of one encounter
+        Sunny Day Use Case - describes what happens when everything goes correctly
+        Include other common scenarios and how they are handled
+        omit needless words. keep it simple
+        
