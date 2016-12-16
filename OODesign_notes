@@ -21,8 +21,7 @@ Intro.6
 1.4 through 1.7
     APIE =
         Abstraction: Focus on the essential qualities of an example, leaving out extras
-        Polymorphism: an object's ability to behave differently in different
-            instances / situations.
+        Polymorphism: an object's ability to behave differently in different instances / situations.
         Inheritance: A subclass inherits all the attributes and behaviors of the
             superclass.
         Encapsulation = bundling attributes of a class together and hiding them
@@ -36,7 +35,7 @@ Intro.6
         2. Describe the app
             a) Simple narrative of how people use the app to complete its goal.
         3. Identify the main objects
-            a) Go back through the narrative, find the most important objects
+            a) Go back through the narrative, find the most important objects,
                 actions, and results, and discard superfluous things
         4. Describe the Interactions
             a) Figure out how your objects interact with each other
@@ -68,6 +67,10 @@ Intro.6
             Interface requirements
             Physical requirements
 
+3.2
+    UML - Unified Modeling Language
+    Covered more below
+
 3.1
     Use Cases - used to explain how and why a user will use the application
         Should be simple and in plain English
@@ -95,4 +98,86 @@ Intro.6
         Sunny Day Use Case - describes what happens when everything goes correctly
         Include other common scenarios and how they are handled
         omit needless words. keep it simple
-        
+
+3.4
+    Use case diagrams contain several different use cases and different Actors
+    In UML, here are a few of the shapes / figures used:
+        Complete Use Cases - Circled/Ellipsed text
+        Actors - Stick figures with labels
+        Knowledge Base (everythin within app) - Box (around all Use Cases)
+        Connection between Actors and Use Cases - lines
+
+3.5
+    User stories - an alternative to use cases
+        Shorter (1 to 2 sentences)
+        written on index cards
+        User stories follow a format:
+            As a.. (type of user, e.g. Bank Customer)
+            I want.. (goal, e.g. to change my PIN online)
+            [so that.. (optional reason, e.g. I do not need to go to a branch)]
+        User stories can be thought of as reminders for a conversation about
+        how a program should work.
+
+4.1
+    Creating conceptual models
+        Go a level deeper than user cases and user stories.
+        Identify the objects necessary for your program
+        Draw a diagram to represent how objects interact with each other
+        Does not need to be complete; you will inevitably need to revisit
+          and refine the models
+
+4.2
+    Identifying classes
+        Go through use cases and user scenarios and pick out the nouns
+            -These are your potential objects
+        If you have duplicates or synonyms, remove the extras
+        Nouns that are actually attributes (rather than class candidates) can be removed, too.
+
+4.3
+    Identifying class relationships
+        It can be heplful to diagram the different classes and connect them with arrows
+            State the relationship (contains a, creates, etc.) on the arrows
+
+4.4
+    Identify class responsibilities
+        Go back through use cases and identify verbs and verb phrases
+        Identify which object is responsible for which action
+            An object should be responsible for itself.
+                e.g. a Customer may ask to check order status, but this is an Order responsibility.
+        Under Object name and attributes, write object's responsibilities.
+
+4.5
+    Using CRC Cards
+        CRC - Class, Responsibility, Collaboration
+        made on index cards. one class per card
+        Class Name - up top
+        Responsibilities - left 2/3rds of card
+        Collaborators - right 1/3 (the other objects it interacts with)
+
+5.1
+    Creating class diagrams
+        Use UML format to name each Class, its attributes, and its operations
+            Class name - Uppercase first letter
+            Attributes - Pascal case (ex. isActive, lineNumber, etc.)
+                with data type - "name: String = 'New Product'"
+            Operations - Pascal case
+                with parameters and return - "displayProduct(): return String"
+            **get and set (e.g. getTitle) are used for operations that alter or retrieve attributes
+        Focus more on what classes do (responsibilities), rather than attributes
+
+5.2
+    Converting class diagrams to code
+        The techniques here should convert to any programming language.
+
+5.3
+    Exploring object lifetime
+    Python's __init__ is a 'constructor method'. It allows you to create objects with attributes already assigned, rather than empty objects
+        you can overload constructors, i.e. give two init functions.
+            this allows you to initialize them differently (e.g. with or without parameters).
+
+  5.4
+      Using static and shared members
+          For variables that have a single value across instances of a class
+          To get a static variable, reference it with the class name rather than instance name
+          Static variables are accessible even if there are no instances created of that class.
+          static attributes and behaviors are represented with an underline ___ in UML.
