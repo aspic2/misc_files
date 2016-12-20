@@ -181,3 +181,31 @@ Intro.6
           To get a static variable, reference it with the class name rather than instance name
           Static variables are accessible even if there are no instances created of that class.
           static attributes and behaviors are represented with an underline ___ in UML.
+
+
+6.1
+    Inheritance
+        -describes an "is a" relationship
+            (Ex. A car is-a vehicle. A bus is-a vehicle. A Pomeranian is-a dog is-a mamman is-an animal)
+        -The goal is to recognize shared attributes and behaviors in objects, that way we code them once (in the Parent class) and all other objects have them.
+        -Sub-classes (or Child classes) inherit all attributes and methods from the super class unless they are Overridden
+        -Recognize false inheritance opportunities and avoid coding them:
+            (Ex. A Bank is not a Bank Account, nor is a Bank Account a Bank. There is no inheritance here.)
+        Avoid excessive levels of inheritance, it should be natural
+
+6.2
+    Using inheritance
+        benefit of inheritance: allows child class to use methods defined in parent class.
+            usually done with the 'super' keyword.
+                ex. super.doSomething():
+
+6.3
+    Using abstract classes (classes that are not instantiated)
+        Certain languages use keywords to ensure that a class 'cannot' be instantiated. These are abstract classes.
+        Other classes are assumed to be capable of instantiation. They can be called 'concrete' classes.
+
+6.4
+    Using interfaces
+        -list of method signatures
+        -an instantiated class can 'implement' these (define behaviors for them). From then on, other classes can use these methods without knowing anything else about them.
+        -interfaces are not natively supported in Python
