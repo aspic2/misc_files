@@ -209,3 +209,39 @@ Intro.6
         -list of method signatures
         -an instantiated class can 'implement' these (define behaviors for them). From then on, other classes can use these methods without knowing anything else about them.
         -interfaces are not natively supported in Python
+
+6.5
+    Using aggregation and Composition
+    Aggregation uses 'has-a' and 'has-many' relationships
+        Ex. A customer has-a address. A bank 'has-many' bank accounts. Classroom object has-a Student object
+    Composition is a form of aggregation that implies ownership
+        Ex. a document has-a page (indeed, it is entirely made of pages), whereas a classroom is not made of students.
+        If the owning object is deleted, the contained objects are too.
+    Composition implies ownership. Aggregation does not.
+    Aggregation is not usually shown in a diagram unless there is something odd about it. Composition is worth showing, since the contained objects will depend on the composed object.
+
+7.1
+    Creating sequence diagrams
+        dynamic diagram type that shows the lifetime of objects and how objects interact with one another.
+
+7.2
+    Working with Advanced UML diagrams
+    Here are the four most common diagrams:
+        Class Diagram
+        Use Case Diagram
+        Object Diagram
+        Sequence Diagram
+
+7.3
+    Using UML tools (electronic tools)
+    Tools to build diagrams
+        Visio, OmniGraffle, gliffy.com, creately.com, lucidchart.com
+    Tools to build code
+        Visual Studio, Eclipse with UMLTools
+    Open-Source tools:
+        ArgoUML
+        Dia
+    Use the wikipedia list to determine the best UML tool for you:
+        http://goo.gl/YAuOY
+
+    
