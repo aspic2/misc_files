@@ -244,4 +244,101 @@ Intro.6
     Use the wikipedia list to determine the best UML tool for you:
         http://goo.gl/YAuOY
 
-    
+8.1
+    Introduction to design patterns
+        Design patterns - best practices, or suggestions, for you to arrange classes and objects to achieve a result.
+        Ex. finding a way to let other objects know if one of the objects in your app changes
+        -The Gang of Four (GoF) wrote a book titled "Design Patterns: Elements of Reusable Object-Oriented Software" that details 23 patterns split into three groups
+            Creational Patterns
+                best and most flexible ways to create objects
+            Structural Patterns
+                How to use inheritance, composition and aggregation, etc. to their best utility
+            Behavioral Patterns
+                communication between objects at runtime
+
+8.2
+    the Singleton Pattern
+        creates one instance of a class and prevents any other instances from being created.
+
+8.3
+    the Mememto Pattern
+        allows an object to save versions of itself to 'undo' changes.
+        requires three objects. The originator (the object that changes), a caretaker, and a memento (created by originator and storing important info about its state)
+
+9.1
+    Intro to OO Design Principles
+        Although not following OO Design Principles probably won't break your code, following them makes updating and maintaining your program much easier.
+
+9.2
+    Exploring general development principles
+    DRY = Don't Repeat yourself
+        -Avoid duplication in code
+        -There should be one place and one place only in the system that deals with a particular problem
+    YAGNI = You Ain't Gonna Need It
+        -Don't write speculative code. Solve today's problems
+    Code Smell = code that compiles and works, but something doesn't smell right about it.
+        -Bad design.
+            -very long methods (should be multiple methods)
+            too short (or long) identifiers
+            -pointless comments
+            -God object = an object that tries to do everything (should be multiple, smaller objects)
+            -Feature Envy - a class that uses all the features of another class
+
+9.3
+    Introduction to SOLID principles - Five principles of OO Design by Robert Martin
+    S - Single Responsibility Principle
+        -A class should have one reason to exist and one reason to change.
+        -The responsibility of that object should reside entirely within that object
+
+    O - Open/Closed Principle
+        Open for extension. Closed for Modification
+            If you need additional features, you do that by writing new code, not by changing code that already works.
+                New subclass, new methods in the subclass, not changing parent class methods
+    L - Liskov Substitution Principle
+        Objects should be replaceable with instances of their subtypes without altering the correctness of the program
+    I - Interface Segregation Principle
+        many specific interfaces are better than one general interface.
+            Interfaces should be as small as possible.
+    D - Dependency Inversion Principle
+        Depend on abstractions, not concretions. Don't have classes connect directly to very specialized classes.
+            Ex. Multimedia store that has an audio file reader class. Store object should connect to Reader class, which connects to AudioFileReader.
+                This abstraction makes the code easier to extend and maintain.
+
+9.4
+    Introduction to GRASP principles
+    GRASP - General Responsibility Assignment Software Patterns
+    Nine concepts:
+        Creator
+            Who is responsible for creating an object?
+                Is that object contained in another object?
+                Does another object know enough to make the new object?
+        Controller
+            Object used to separate Business objects from the User Interface
+        Pure Fabrication
+            When behavior comes about in making a program that doesn't fit into other classes, make a new class.
+        Information Expert
+            A class should be responsible for itself. If there is a responibility to assign, we give it to the class with the most information on that responsibility.
+        High Cohesion
+            measure of how focused the internal behavior of a class is
+        Indirection
+            To reduce Coupling, introduce an intermediate object
+        Low Coupling
+            Reduce the number of required connections among objects
+            High coupling, or requiring multiple connections for one object to function, increases the chance of something breaking.
+        Polymorphism
+            Automatically correct behavior based on type
+                As opposed to: conditional logic that checks for particular types
+        Protected Variations
+            Protect the system from changes and variations.
+                Identify the most likely points of change
+                Use multiple techniques: encapsulations, LSP, OCP
+
+Conclusion:
+Additional Resources:
+      Software Requirements - Carl Riegers
+          learn to discuss needs and requirements for an app with clients
+      Writing Effective Use Cases - Alisatiar Coban
+          examples and common mistakes to watch
+      User Stories Applied - Mike Cohn
+      UML Distilled - Martin Fowler
+      Head First Design Patterns
