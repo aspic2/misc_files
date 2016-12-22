@@ -163,7 +163,7 @@ Intro.6
             Operations - Pascal case
                 with parameters and return - "displayProduct(): return String"
             **get and set (e.g. getTitle) are used for operations that alter or retrieve attributes
-        Focus more on what classes do (responsibilities), rather than attributes
+        Focus more on what classes do (responsibilities and operations), rather than attributes
 
 5.2
     Converting class diagrams to code
@@ -186,12 +186,12 @@ Intro.6
 6.1
     Inheritance
         -describes an "is a" relationship
-            (Ex. A car is-a vehicle. A bus is-a vehicle. A Pomeranian is-a dog is-a mamman is-an animal)
+            (Ex. A car is-a vehicle. A bus is-a vehicle. A Pomeranian is-a dog is-a mammal is-an animal)
         -The goal is to recognize shared attributes and behaviors in objects, that way we code them once (in the Parent class) and all other objects have them.
         -Sub-classes (or Child classes) inherit all attributes and methods from the super class unless they are Overridden
         -Recognize false inheritance opportunities and avoid coding them:
-            (Ex. A Bank is not a Bank Account, nor is a Bank Account a Bank. There is no inheritance here.)
-        Avoid excessive levels of inheritance, it should be natural
+            (Ex. A Bank is not a Bank Account, nor is a Bank Account a Bank. There is no inheritance here although the two are connected.)
+        Avoid excessive levels of inheritance, it should be natural.
 
 6.2
     Using inheritance
@@ -202,7 +202,7 @@ Intro.6
 6.3
     Using abstract classes (classes that are not instantiated)
         Certain languages use keywords to ensure that a class 'cannot' be instantiated. These are abstract classes.
-        Other classes are assumed to be capable of instantiation. They can be called 'concrete' classes.
+        All other classes are assumed to be capable of instantiation. They can be called 'concrete' classes.
 
 6.4
     Using interfaces
@@ -213,9 +213,9 @@ Intro.6
 6.5
     Using aggregation and Composition
     Aggregation uses 'has-a' and 'has-many' relationships
-        Ex. A customer has-a address. A bank 'has-many' bank accounts. Classroom object has-a Student object
+        Ex. A customer 'has-a' address. A bank 'has-many' bank accounts. Classroom object 'has-a' Student object
     Composition is a form of aggregation that implies ownership
-        Ex. a document has-a page (indeed, it is entirely made of pages), whereas a classroom is not made of students.
+        Ex. a document has-a page and indeed is entirely made of pages, whereas a classroom is not made of students.
         If the owning object is deleted, the contained objects are too.
     Composition implies ownership. Aggregation does not.
     Aggregation is not usually shown in a diagram unless there is something odd about it. Composition is worth showing, since the contained objects will depend on the composed object.
@@ -278,10 +278,10 @@ Intro.6
         -Don't write speculative code. Solve today's problems
     Code Smell = code that compiles and works, but something doesn't smell right about it.
         -Bad design.
-            -very long methods (should be multiple methods)
+            -very long methods (should be broken out into multiple methods)
             too short (or long) identifiers
             -pointless comments
-            -God object = an object that tries to do everything (should be multiple, smaller objects)
+            -God object = an object that tries to do everything (should be made into multiple, smaller objects)
             -Feature Envy - a class that uses all the features of another class
 
 9.3
@@ -301,7 +301,7 @@ Intro.6
             Interfaces should be as small as possible.
     D - Dependency Inversion Principle
         Depend on abstractions, not concretions. Don't have classes connect directly to very specialized classes.
-            Ex. Multimedia store that has an audio file reader class. Store object should connect to Reader class, which connects to AudioFileReader.
+            Ex. Multimedia store object that has an audio file reader class. Store object should connect to Reader class, which connects to AudioFileReader.
                 This abstraction makes the code easier to extend and maintain.
 
 9.4
@@ -337,7 +337,7 @@ Conclusion:
 Additional Resources:
       Software Requirements - Carl Riegers
           learn to discuss needs and requirements for an app with clients
-      Writing Effective Use Cases - Alisatiar Coban
+      Writing Effective Use Cases - Alisatiar Cockburn
           examples and common mistakes to watch
       User Stories Applied - Mike Cohn
       UML Distilled - Martin Fowler
