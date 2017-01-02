@@ -1,0 +1,344 @@
+'''
+Foundations of Programming: Object-Oriented Design
+'''
+Intro.6
+"To write any piece of software, we need to do three things:
+    1. Understand our problem - Analysis
+    2. Plan our solution - Design
+    3. Build it - Programming
+    "
+
+
+1.2
+    Objects in programming are similar to objects in real-life. They have:
+        1. Identity (are separate from things like them)
+        2. Attributes (characteristics about them, like names or colors)
+        3. Behavior (they do something or receive some action)
+
+1.3
+    Classes have names, attributes, and methods (functions).
+
+1.4 through 1.7
+    APIE =
+        Abstraction: Focus on the essential qualities of an example, leaving out extras
+        Polymorphism: an object's ability to behave differently in different instances / situations.
+        Inheritance: A subclass inherits all the attributes and behaviors of the
+            superclass.
+        Encapsulation = bundling attributes of a class together and hiding them
+            from other parts of the application. This is less for secrecy and
+            more for avoiding cascading problems when changing things.
+
+2.1
+    Steps in the OO Analysis and Design Process:
+        1. Gather requirements
+            a) What does the app need to do?
+        2. Describe the app
+            a) Simple narrative of how people use the app to complete its goal.
+        3. Identify the main objects
+            a) Go back through the narrative, find the most important objects,
+                actions, and results, and discard superfluous things
+        4. Describe the Interactions
+            a) Figure out how your objects interact with each other
+        5. Create a Class Diagram
+
+2.2
+    Requirements - What must the program do?
+    NOTE: Cut the fluff here. No half-formed ideas on what might be cool.
+          Only things that it MUST have/do.
+        Functional Requirements
+            Features and Capabilities
+        Non-Functional Requirements
+            Help
+            Legal
+            Performance
+            Support
+            Security
+
+        FURPS / FURPS+
+            Functional requirements
+            Usability requirements
+            Reliability requirements
+            Performance requirements
+            Supportability requirements
+
+            +
+            Design requirements
+            Implementation requirements
+            Interface requirements
+            Physical requirements
+
+3.2
+    UML - Unified Modeling Language
+    Covered more below
+
+3.1
+    Use Cases - used to explain how and why a user will use the application
+        Should be simple and in plain English
+    Use cases have three parts:
+        1) Title - short phrase, active verb
+        2) Actor - person accomplishing goal
+        3) Scenario - step-by-step on how the actor accomplishes goal
+            Paragraph of short, declarative sentences
+            Numbered list of steps
+        3.5) Extensions - covers situations not seen in normal scenario
+                Issues, Exceptions, etc.
+
+3.2
+    Actors are people (or systems) that live outside the application that
+    need to accomplish goals within the application.
+    -Determine if you need different roles or security clearance between different Actors
+    -The same person could be different actors on different days, as the
+        actor designation revolves around what they want to accomplish
+
+3.3
+    Identifying the scenarios
+        Create user-focused goals (not "login to account", but rather
+        what the user wants to do when they login.)
+            -emphasize the goal of one encounter
+        Sunny Day Use Case - describes what happens when everything goes correctly
+        Include other common scenarios and how they are handled
+        omit needless words. keep it simple
+
+3.4
+    Use case diagrams contain several different use cases and different Actors
+    In UML, here are a few of the shapes / figures used:
+        Complete Use Cases - Circled/Ellipsed text
+        Actors - Stick figures with labels
+        Knowledge Base (everythin within app) - Box (around all Use Cases)
+        Connection between Actors and Use Cases - lines
+
+3.5
+    User stories - an alternative to use cases
+        Shorter (1 to 2 sentences)
+        written on index cards
+        User stories follow a format:
+            As a.. (type of user, e.g. Bank Customer)
+            I want.. (goal, e.g. to change my PIN online)
+            [so that.. (optional reason, e.g. I do not need to go to a branch)]
+        User stories can be thought of as reminders for a conversation about
+        how a program should work.
+
+4.1
+    Creating conceptual models
+        Go a level deeper than user cases and user stories.
+        Identify the objects necessary for your program
+        Draw a diagram to represent how objects interact with each other
+        Does not need to be complete; you will inevitably need to revisit
+          and refine the models
+
+4.2
+    Identifying classes
+        Go through use cases and user scenarios and pick out the nouns
+            -These are your potential objects
+        If you have duplicates or synonyms, remove the extras
+        Nouns that are actually attributes (rather than class candidates) can be removed, too.
+
+4.3
+    Identifying class relationships
+        It can be heplful to diagram the different classes and connect them with arrows
+            State the relationship (contains a, creates, etc.) on the arrows
+
+4.4
+    Identify class responsibilities
+        Go back through use cases and identify verbs and verb phrases
+        Identify which object is responsible for which action
+            An object should be responsible for itself.
+                e.g. a Customer may ask to check order status, but this is an Order responsibility.
+        Under Object name and attributes, write object's responsibilities.
+
+4.5
+    Using CRC Cards
+        CRC - Class, Responsibility, Collaboration
+        made on index cards. one class per card
+        Class Name - up top
+        Responsibilities - left 2/3rds of card
+        Collaborators - right 1/3 (the other objects it interacts with)
+
+5.1
+    Creating class diagrams
+        Use UML format to name each Class, its attributes, and its operations
+            Class name - Uppercase first letter
+            Attributes - Pascal case (ex. isActive, lineNumber, etc.)
+                with data type - "name: String = 'New Product'"
+            Operations - Pascal case
+                with parameters and return - "displayProduct(): return String"
+            **get and set (e.g. getTitle) are used for operations that alter or retrieve attributes
+        Focus more on what classes do (responsibilities and operations), rather than attributes
+
+5.2
+    Converting class diagrams to code
+        The techniques here should convert to any programming language.
+
+5.3
+    Exploring object lifetime
+    Python's __init__ is a 'constructor method'. It allows you to create objects with attributes already assigned, rather than empty objects
+        you can overload constructors, i.e. give two init functions.
+            this allows you to initialize them differently (e.g. with or without parameters).
+
+  5.4
+      Using static and shared members
+          For variables that have a single value across instances of a class
+          To get a static variable, reference it with the class name rather than instance name
+          Static variables are accessible even if there are no instances created of that class.
+          static attributes and behaviors are represented with an underline ___ in UML.
+
+
+6.1
+    Inheritance
+        -describes an "is a" relationship
+            (Ex. A car is-a vehicle. A bus is-a vehicle. A Pomeranian is-a dog is-a mammal is-an animal)
+        -The goal is to recognize shared attributes and behaviors in objects, that way we code them once (in the Parent class) and all other objects have them.
+        -Sub-classes (or Child classes) inherit all attributes and methods from the super class unless they are Overridden
+        -Recognize false inheritance opportunities and avoid coding them:
+            (Ex. A Bank is not a Bank Account, nor is a Bank Account a Bank. There is no inheritance here although the two are connected.)
+        Avoid excessive levels of inheritance, it should be natural.
+
+6.2
+    Using inheritance
+        benefit of inheritance: allows child class to use methods defined in parent class.
+            usually done with the 'super' keyword.
+                ex. super.doSomething():
+
+6.3
+    Using abstract classes (classes that are not instantiated)
+        Certain languages use keywords to ensure that a class 'cannot' be instantiated. These are abstract classes.
+        All other classes are assumed to be capable of instantiation. They can be called 'concrete' classes.
+
+6.4
+    Using interfaces
+        -list of method signatures
+        -an instantiated class can 'implement' these (define behaviors for them). From then on, other classes can use these methods without knowing anything else about them.
+        -interfaces are not natively supported in Python
+
+6.5
+    Using aggregation and Composition
+    Aggregation uses 'has-a' and 'has-many' relationships
+        Ex. A customer 'has-a' address. A bank 'has-many' bank accounts. Classroom object 'has-a' Student object
+    Composition is a form of aggregation that implies ownership
+        Ex. a document has-a page and indeed is entirely made of pages, whereas a classroom is not made of students.
+        If the owning object is deleted, the contained objects are too.
+    Composition implies ownership. Aggregation does not.
+    Aggregation is not usually shown in a diagram unless there is something odd about it. Composition is worth showing, since the contained objects will depend on the composed object.
+
+7.1
+    Creating sequence diagrams
+        dynamic diagram type that shows the lifetime of objects and how objects interact with one another.
+
+7.2
+    Working with Advanced UML diagrams
+    Here are the four most common diagrams:
+        Class Diagram
+        Use Case Diagram
+        Object Diagram
+        Sequence Diagram
+
+7.3
+    Using UML tools (electronic tools)
+    Tools to build diagrams
+        Visio, OmniGraffle, gliffy.com, creately.com, lucidchart.com
+    Tools to build code
+        Visual Studio, Eclipse with UMLTools
+    Open-Source tools:
+        ArgoUML
+        Dia
+    Use the wikipedia list to determine the best UML tool for you:
+        http://goo.gl/YAuOY
+
+8.1
+    Introduction to design patterns
+        Design patterns - best practices, or suggestions, for you to arrange classes and objects to achieve a result.
+        Ex. finding a way to let other objects know if one of the objects in your app changes
+        -The Gang of Four (GoF) wrote a book titled "Design Patterns: Elements of Reusable Object-Oriented Software" that details 23 patterns split into three groups
+            Creational Patterns
+                best and most flexible ways to create objects
+            Structural Patterns
+                How to use inheritance, composition and aggregation, etc. to their best utility
+            Behavioral Patterns
+                communication between objects at runtime
+
+8.2
+    the Singleton Pattern
+        creates one instance of a class and prevents any other instances from being created.
+
+8.3
+    the Mememto Pattern
+        allows an object to save versions of itself to 'undo' changes.
+        requires three objects. The originator (the object that changes), a caretaker, and a memento (created by originator and storing important info about its state)
+
+9.1
+    Intro to OO Design Principles
+        Although not following OO Design Principles probably won't break your code, following them makes updating and maintaining your program much easier.
+
+9.2
+    Exploring general development principles
+    DRY = Don't Repeat yourself
+        -Avoid duplication in code
+        -There should be one place and one place only in the system that deals with a particular problem
+    YAGNI = You Ain't Gonna Need It
+        -Don't write speculative code. Solve today's problems
+    Code Smell = code that compiles and works, but something doesn't smell right about it.
+        -Bad design.
+            -very long methods (should be broken out into multiple methods)
+            too short (or long) identifiers
+            -pointless comments
+            -God object = an object that tries to do everything (should be made into multiple, smaller objects)
+            -Feature Envy - a class that uses all the features of another class
+
+9.3
+    Introduction to SOLID principles - Five principles of OO Design by Robert Martin
+    S - Single Responsibility Principle
+        -A class should have one reason to exist and one reason to change.
+        -The responsibility of that object should reside entirely within that object
+
+    O - Open/Closed Principle
+        Open for extension. Closed for Modification
+            If you need additional features, you do that by writing new code, not by changing code that already works.
+                New subclass, new methods in the subclass, not changing parent class methods
+    L - Liskov Substitution Principle
+        Objects should be replaceable with instances of their subtypes without altering the correctness of the program
+    I - Interface Segregation Principle
+        many specific interfaces are better than one general interface.
+            Interfaces should be as small as possible.
+    D - Dependency Inversion Principle
+        Depend on abstractions, not concretions. Don't have classes connect directly to very specialized classes.
+            Ex. Multimedia store object that has an audio file reader class. Store object should connect to Reader class, which connects to AudioFileReader.
+                This abstraction makes the code easier to extend and maintain.
+
+9.4
+    Introduction to GRASP principles
+    GRASP - General Responsibility Assignment Software Patterns
+    Nine concepts:
+        Creator
+            Who is responsible for creating an object?
+                Is that object contained in another object?
+                Does another object know enough to make the new object?
+        Controller
+            Object used to separate Business objects from the User Interface
+        Pure Fabrication
+            When behavior comes about in making a program that doesn't fit into other classes, make a new class.
+        Information Expert
+            A class should be responsible for itself. If there is a responibility to assign, we give it to the class with the most information on that responsibility.
+        High Cohesion
+            measure of how focused the internal behavior of a class is
+        Indirection
+            To reduce Coupling, introduce an intermediate object
+        Low Coupling
+            Reduce the number of required connections among objects
+            High coupling, or requiring multiple connections for one object to function, increases the chance of something breaking.
+        Polymorphism
+            Automatically correct behavior based on type
+                As opposed to: conditional logic that checks for particular types
+        Protected Variations
+            Protect the system from changes and variations.
+                Identify the most likely points of change
+                Use multiple techniques: encapsulations, LSP, OCP
+
+Conclusion:
+Additional Resources:
+      Software Requirements - Carl Riegers
+          learn to discuss needs and requirements for an app with clients
+      Writing Effective Use Cases - Alisatiar Cockburn
+          examples and common mistakes to watch
+      User Stories Applied - Mike Cohn
+      UML Distilled - Martin Fowler
+      Head First Design Patterns
