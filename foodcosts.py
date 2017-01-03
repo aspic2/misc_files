@@ -1,12 +1,7 @@
 #calculate the cost of foods / consumable goods for comparison
-'''
-meat_sandwich = bread, meat, cheese
-pbj_sandwich = bread, peanutbutter, jelly
 
-xhamburger_helper = ground_beef, milk, hh_mix
+#should meals be different classes or different instances of the class meals?
 
-grilled_cheese = bread, cheese, pepperoni
-'''
 
 class Food(object):
 
@@ -30,12 +25,12 @@ class Meal(object):
 
     def makemeal(self):
         ingredients = self.ingredients
-        price = self.price
         for i in ingredients:
-            ingredients.append(i)
-        for i in ingredients:
-            price += Food.foods[i]
-        return price
+            self.price += Food.foods[i]
+        return self.price
+
+class Sandwich(Meal):
+
 
 
 
@@ -56,11 +51,11 @@ pepperoni = Food('pepperoni', 4, 30)
 print(Food.foods)
 
 wheat_sandwich = Meal('wheat sandwich')
-wheat_sandwich.ingredients = 'wheat bread', 'cheese', 'lunchmeat'
+wheat_sandwich.ingredients = ['wheat bread', 'cheese', 'lunchmeat']
 
 raisinbread_sandwich = Meal('raisin bread sandwich')
-raisinbread_sandwich.ingredients = 'raisin bread', 'cheese', 'lunchmeat'
+raisinbread_sandwich.ingredients = ['raisin bread', 'cheese', 'lunchmeat']
 
 print(wheat_sandwich.ingredients)
-wheat_sandwich.makemeal
+wheat_sandwich.makemeal()
 print(wheat_sandwich.price)
