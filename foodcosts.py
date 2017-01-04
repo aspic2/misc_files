@@ -7,9 +7,10 @@ class Food(object):
 
     foods = {}
 
-    def __init__(self, name, pkgcost, units_per_pkg):
+    def __init__(self, name, pkgcost, units, units_per_pkg):
         self.name = name
         self.pkgcost = pkgcost
+        self.units = units
         self.upp = units_per_pkg
         self.cost_per_unit = self.pkgcost / self.upp
         Food.foods[self.name] = self.cost_per_unit
@@ -30,6 +31,7 @@ class Meal(object):
         return self.price
 
 class Sandwich(Meal):
+    pass
 
 
 
@@ -37,15 +39,15 @@ class Sandwich(Meal):
 
 
 
-ground_beef = Food('ground beef', 5.6, 1)
-milk = Food('milk', 2.5, 16)
+ground_beef = Food('ground beef', 5.6, 'lbs', 1)
+milk = Food('milk', 2.5, 'cups', 16)
 
 #dishes I am uncertain about
-wheat_bread = Food('wheat bread', 1.2, 20)
-raisinbread = Food('raisin bread', 2, 16)
-cheese = Food('cheese', 2.5, 11)
-lunchmeat = Food('lunchmeat', 5.99, 24)
-pepperoni = Food('pepperoni', 4, 30)
+wheat_bread = Food('wheat bread', 1.2, 'slice', 20)
+raisinbread = Food('raisin bread', 2, 'slice', 16)
+cheese = Food('cheese', 2.5, 'slice', 11)
+lunchmeat = Food('lunchmeat', 5.99, 'slice', 24)
+pepperoni = Food('pepperoni', 4, 'slice', 30)
 
 
 print(Food.foods)
