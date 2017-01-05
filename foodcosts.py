@@ -18,6 +18,7 @@ class Food(object):
     def print_cost_per_meal(self):
         print("%s costs $%d per meal" % (self.name, self.unitcost/self.mpu))
 
+
 class Meal(object):
     def __init__(self, name):
         self.name = name
@@ -26,22 +27,19 @@ class Meal(object):
 
     def makemeal(self):
         ingredients = self.ingredients
+        print("-" * 50, "\nMaking %s..." % self.name)
+        print("%s contains the following ingredients and quantities:" % self.name)
+        print(self.ingredients)
         for i in ingredients:
-            self.price += Food.foods[i]
-        return self.price
-
-class Sandwich(Meal):
-    pass
-
-
-
+            self.price += Food.foods[i] * self.ingredients[i]
+        print("-" * 25, "\nThis dish costs $%.2f per meal" % self.price)
 
 
 
 
 ground_beef = Food('ground beef', 5.6, 'lbs', 1)
 milk = Food('milk', 2.5, 'cups', 16)
-
+hhmix = Food('hamburger helper mix', 1.5, 'box', 1)
 #dishes I am uncertain about
 wheat_bread = Food('wheat bread', 1.2, 'slice', 20)
 raisinbread = Food('raisin bread', 2, 'slice', 16)
@@ -50,14 +48,20 @@ lunchmeat = Food('lunchmeat', 5.99, 'slice', 24)
 pepperoni = Food('pepperoni', 4, 'slice', 30)
 
 
-print(Food.foods)
-
 wheat_sandwich = Meal('wheat sandwich')
-wheat_sandwich.ingredients = ['wheat bread', 'cheese', 'lunchmeat']
+wheat_sandwich.ingredients = {'wheat bread': 4, 'cheese': 2, 'lunchmeat': 4}
 
 raisinbread_sandwich = Meal('raisin bread sandwich')
-raisinbread_sandwich.ingredients = ['raisin bread', 'cheese', 'lunchmeat']
+raisinbread_sandwich.ingredients = {'raisin bread': 4, 'cheese': 2, 'lunchmeat': 4}
 
-print(wheat_sandwich.ingredients)
-wheat_sandwich.makemeal()
-print(wheat_sandwich.price)
+hh = Meal('hamburger helper')
+hh.ingredients = {'ground beef': .25, 'milk': .25, 'hamburger helper mix': .25}
+
+grilled_cheese = Meal('grilled cheese')
+grilled_cheese.ingredients = {'wheat bread': 4, 'cheese': 2, 'pepperoni': 6}
+
+
+#wheat_sandwich.makemeal()
+#raisinbread_sandwich.makemeal()
+hh.makemeal()
+grilled_cheese.makemeal()
