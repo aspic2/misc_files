@@ -54,7 +54,7 @@ highlife = Food('Miller Highlife', 6.99, '12oz', 12)
 budlight = Food('Bud Light', 9.99, '12oz', 15)
 z_dust = Food('Zombie Dust', 14.99, '12oz', 6)
 troublesome = Food('Off Color Troublesome', 8.99, '12oz', 6)
-
+apex_predator = Food('Apex Predator', 7.99, '12oz', 4)
 flip_yogurt_bfast = Meal('2 Chobani Flips')
 flip_yogurt_bfast.ingredients = {'Chobani Flip': 10.6}
 
@@ -68,19 +68,20 @@ raisinbread_sandwich = Meal('raisin bread sandwich')
 raisinbread_sandwich.ingredients = {'raisin bread': 4, 'cheese': 2, 'lunchmeat': 4}
 
 hh = Meal('hamburger helper')
-hh.ingredients = {'ground beef': 1/5, 'milk': 2/5, 'hamburger helper mix': 1/5}
+hh.ingredients = {'ground beef': 1/4, 'milk': 2/4, 'hamburger helper mix': 1/4}
 
 grilled_cheese = Meal('grilled cheese')
-grilled_cheese.ingredients = {'wheat bread': 4, 'cheese': 2, 'pepperoni': 6}
+grilled_cheese.ingredients = {'wheat bread': 4, 'cheese': 2, 'pepperoni': 4}
 
 
 
 highlife.print_cpu()
 z_dust.print_cpu()
 troublesome.print_cpu()
+apex_predator.print_cpu()
 budlight.print_cpu()
 
-#wheat_sandwich.makemeal()
+wheat_sandwich.makemeal()
 #raisinbread_sandwich.makemeal()
 #tub_yogurt_bfast.makemeal()
 #flip_yogurt_bfast.makemeal()
