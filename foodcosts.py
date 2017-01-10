@@ -51,6 +51,7 @@ chobani_tub = Food('Chobani Tub', 5.49, '1oz', 32)
 
 
 highlife = Food('Miller Highlife', 6.99, '12oz', 12)
+highlife_discount = Food("Discount Miller Highlife", 13.99, '12oz', 30)
 budlight = Food('Bud Light', 9.99, '12oz', 15)
 z_dust = Food('Zombie Dust', 14.99, '12oz', 6)
 troublesome = Food('Off Color Troublesome', 8.99, '12oz', 6)
@@ -76,6 +77,7 @@ grilled_cheese.ingredients = {'wheat bread': 4, 'cheese': 2, 'pepperoni': 4}
 
 
 highlife.print_cpu()
+highlife_discount.print_cpu()
 z_dust.print_cpu()
 troublesome.print_cpu()
 apex_predator.print_cpu()
