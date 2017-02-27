@@ -43,11 +43,13 @@ hhmix = Food('hamburger helper mix', 1.5, 'box', 1)
 #dishes I am uncertain about
 wheat_bread = Food('wheat bread', 1.2, 'slice', 20)
 raisinbread = Food('raisin bread', 2, 'slice', 16)
-cheese = Food('cheese', 2.5, 'slice', 11)
+cheese = Food('cheese', 2.48, 'slice', 11)
 lunchmeat = Food('lunchmeat', 5.99, 'slice', 32)
 pepperoni = Food('pepperoni', 4, 'slice', 70)
 chobani_flip = Food('Chobani Flip', 1.33, '1oz', 5.3)
 chobani_tub = Food('Chobani Tub', 5.49, '1oz', 32)
+jambalaya_mix = Food('Jambalaya Mix', 1.67, '1/2 box', 2)
+italian_sausage = Food('Italian Sausage', 4.99, 'sausage', 4)
 
 
 highlife = Food('Miller Highlife', 6.99, '12oz', 12)
@@ -56,6 +58,8 @@ budlight = Food('Bud Light', 9.99, '12oz', 15)
 z_dust = Food('Zombie Dust', 14.99, '12oz', 6)
 troublesome = Food('Off Color Troublesome', 8.99, '12oz', 6)
 apex_predator = Food('Apex Predator', 7.99, '12oz', 4)
+
+
 flip_yogurt_bfast = Meal('2 Chobani Flips')
 flip_yogurt_bfast.ingredients = {'Chobani Flip': 10.6}
 
@@ -74,6 +78,8 @@ hh.ingredients = {'ground beef': 1/4, 'milk': 2/4, 'hamburger helper mix': 1/4}
 grilled_cheese = Meal('grilled cheese')
 grilled_cheese.ingredients = {'wheat bread': 4, 'cheese': 2, 'pepperoni': 4}
 
+jambalaya = Meal("Zatarain's Jambalaya")
+jambalaya.ingredients = {'Jambalaya Mix': 1, 'Italian Sausage': 2}
 
 
 highlife.print_cpu()
@@ -89,3 +95,4 @@ wheat_sandwich.makemeal()
 #flip_yogurt_bfast.makemeal()
 hh.makemeal()
 grilled_cheese.makemeal()
+jambalaya.makemeal()
